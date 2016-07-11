@@ -1,9 +1,17 @@
-%function bw1 = main(I)
+%function bw1 = main(I,m,v,th1,th2,th3)
 
 % Return the cell segmented binary image from a given image
 % Use:  Segmented_image = main(Image)
 
 % Inputs : Input image,
+%          Window size of Gaussian filter,
+%          Variance of Gaussian filter,
+%          Threshold of object size (Remove objects of area less than a
+%          given threshold)
+%          Threshold of Rectangularity (Area of the object/ Area of its
+%          minimum bounding box)
+%          Threshold of elongation (Rectangularity/Aspect Ratio of minimum
+%          bounding box)
 % Output : Segmented image
 
 I = imread('cropped_31.jp2');
@@ -62,3 +70,4 @@ bw1 = bw1 - bw1n;
  
 
     
+
